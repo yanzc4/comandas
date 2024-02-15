@@ -89,7 +89,7 @@ body.dark {
 
 .sidebar .text,
 .sidebar .icon {
-  color: var(--text-color);
+  
   transition: var(--tran-03);
 }
 
@@ -192,22 +192,27 @@ body.dark .sidebar header .toggle {
   font-weight: 500;
   transition: var(--tran-05);
 }
-
+.seleccionado{
+  background-color: var(--primary-color);
+  color: var(--sidebar-color) !important;
+}
 .sidebar li a {
   list-style: none;
   height: 100%;
-  background-color: transparent;
+  
   display: flex;
   align-items: center;
   height: 100%;
   width: 100%;
   border-radius: 6px;
   text-decoration: none;
+  color: var(--text-color);
   transition: var(--tran-03);
 }
 
 .sidebar li a:hover {
   background-color: var(--primary-color);
+  color: var(--sidebar-color);
 }
 
 .sidebar li a:hover .icon,
@@ -325,9 +330,10 @@ body.dark .switch::before {
 body.dark .home .text {
   color: var(--text-color);
 }
+
 /* responsive celular */
 
-@media screen and (max-width: 720px) {
+@media screen and (max-device-width: 720px), screen and (max-device-width: 900px), screen and (max-device-width: 480px), screen and (max-device-width: 1200px) {
  
   .sidebar header .toggle {
     position: fixed;

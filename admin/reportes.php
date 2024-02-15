@@ -12,3 +12,7 @@ if (preg_match("/(android|webos|avantgo|iphone|ipod|ipad|bolt|boost|cricket|doco
 <?php
 require_once '../frontend/footer.php';
 ?>
+    <script src="../assets/js/reportes.js"></script>
+</body>
+
+</html>

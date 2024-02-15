@@ -67,3 +67,7 @@ require_once '../frontend/cabecera.php';
 <?php
 require_once '../frontend/footer.php';
 ?>
+    <script src="../assets/js/platos.js"></script>
+</body>
+
+</html>

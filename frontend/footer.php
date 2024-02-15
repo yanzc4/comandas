@@ -43,7 +43,3 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="../assets/libs/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../assets/js/platos.js"></script>
-</body>
-
-</html>

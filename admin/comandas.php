@@ -8,7 +8,7 @@ if (preg_match("/(android|webos|avantgo|iphone|ipod|ipad|bolt|boost|cricket|doco
 ?>
 
 <div class="row p-0 m-0 pe-3 ps-3 pt-2 contenedor">
-    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 mb-2">
+    <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 mb-2">
         <div class="d-flex mt-2">
             <div class="col">
                 <input oninput="buscar_ahora($('#buscar_1').val(), categorias);" type="text" class="form-control" id="buscar_1" name="buscar_1" placeholder="Buscar Plato">
@@ -50,7 +50,7 @@ if (preg_match("/(android|webos|avantgo|iphone|ipod|ipad|bolt|boost|cricket|doco
 
         </div>
     </div>
-    <div class="resumen col-sm-12 col-md-4 col-lg-4 col-xl-4 pt-3 pb-3">
+    <div class="resumen col-sm-12 col-md-12 col-lg-4 col-xl-4 pt-3 pb-3">
         <div id="carrito"></div>
     </div>
 </div>
@@ -58,3 +58,7 @@ if (preg_match("/(android|webos|avantgo|iphone|ipod|ipad|bolt|boost|cricket|doco
 <?php
 require_once '../frontend/footer.php';
 ?>
+    <script src="../assets/js/platos.js"></script>
+</body>
+
+</html>

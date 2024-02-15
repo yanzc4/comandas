@@ -1,9 +1,10 @@
 <?php
 include_once '../inc/conexion.php';
 session_start();
-$conexion = conectar();
+
 
 if (isset($_POST['token']) && $_POST['token'] == $_SESSION['token'] && isset($_POST['cat'])) {
+    $conexion = conectar();
     $cat = $_POST['cat'];
     $query = "SELECT * FROM productos WHERE estado = 1 AND categoria = '$cat';";
     $resultado = $conexion->query($query);
@@ -27,6 +28,9 @@ if (isset($_POST['token']) && $_POST['token'] == $_SESSION['token'] && isset($_P
         </div>
         <?php
     }
+    mysqli_close($conexion);
 }else{
     echo "No tienes acceso a esta informacion si no tienes un token valido";
 }
+//cerrar conexion;
+

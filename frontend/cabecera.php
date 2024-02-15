@@ -23,6 +23,11 @@ if (!isset($_SESSION['token'])) {
         .h-header {
             height: 50px;
         }
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
         .redondear {
             border-radius: 10px;
         }
@@ -39,7 +44,7 @@ if (!isset($_SESSION['token'])) {
             overflow-x: hidden;
         }
         .platos::-webkit-scrollbar, .pedidos::-webkit-scrollbar {
-            width: 9px;
+            width: 6px;
             border-radius: 15px;
         }
 
@@ -97,11 +102,19 @@ if (!isset($_SESSION['token'])) {
             top: 0;
             z-index: 1;
         }
-        @media screen and (max-width: 720px) {
-            
+        .perfil{
+            width: 50px;
+            height: 50px;
+        }
+        .bg-primer{
+            background: #EFEFEF;
+        }
+        @media screen and (max-width: 720px), screen and (max-width: 900px), screen and (max-width: 480px) {
+            .contenedor{
+                width: 100%;
+            }
             .platos{
                 height: 400px;
-
             }
             .categorias{
                 height: auto;
@@ -118,8 +131,10 @@ if (!isset($_SESSION['token'])) {
             }
             .subtotal{
                 height: 100%;
+                width: 100%;
             }
         }
+
     </style>
 </head>
 <body>

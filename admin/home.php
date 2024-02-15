@@ -7,8 +7,12 @@ if (preg_match("/(android|webos|avantgo|iphone|ipod|ipad|bolt|boost|cricket|doco
 }
 ?>
 
-
+hola dashboard
 
 <?php
 require_once '../frontend/footer.php';
 ?>
+    <script src="../assets/js/home.js"></script>
+</body>
+
+</html>

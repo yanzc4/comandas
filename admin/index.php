@@ -7,7 +7,7 @@ $nombreCliente = "Administrador";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/menu.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
     <link rel="stylesheet" href="../assets/libs/bootstrap-icons/font/bootstrap-icons.min.css">
 </head>
 <body>
@@ -15,7 +15,7 @@ $nombreCliente = "Administrador";
     <header>
         <div class="image-text">
             <span class="image">
-            <img src="" alt="">
+            <img src="../assets/img/comanda.png" alt="logo">
             </span>
 
             <div class="text logo-text">
@@ -47,7 +47,7 @@ $nombreCliente = "Administrador";
 
             <ul class="menu-links">
                 <li class="nav-link">
-                    <a href="home" target="myFrame">
+                    <a href="home" class="seleccionado" target="myFrame">
                         <i class='bi bi-house-fill icon'></i>
                         <span class="text nav-text">Inicio</span>
                     </a>
@@ -125,6 +125,27 @@ searchBtn.addEventListener("click" , () =>{
     sidebar.classList.remove("close");
 })
 
+//funcion para cambiar el color a cada a 
+const links = document.querySelectorAll("a");
+
+links.forEach(link => {
+    link.addEventListener("click" , () =>{
+        //manter el hover en el link seleccionado
+        links.forEach(link => link.classList.remove("seleccionado"));
+        link.classList.add("seleccionado");
+
+
+        
+        //cerrar el sidebar solo en dispositivos pequeños con un delay
+        if(window.innerWidth <= 720){
+            setTimeout(() =>{
+                sidebar.classList.add("close");
+            },300)
+        }
+    })
+});
+
+/*
 modeSwitch.addEventListener("click" , () =>{
     body.classList.toggle("dark");
     
@@ -154,6 +175,7 @@ if (localStorage.getItem('dark-mode') === 'true') {
     body.classList.remove('dark');
     modeText.innerText = "Dark mode";
 }
+*/
 </script>
 </body>
 </html>
